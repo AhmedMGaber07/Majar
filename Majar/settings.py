@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'sellproperty',
 
     'silk',
-
+    'rest_framework',
 ]
 
 

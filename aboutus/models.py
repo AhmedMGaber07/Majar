@@ -39,6 +39,7 @@ class Mission(models.Model):
         verbose_name = "Mission"
         verbose_name_plural = "Mission"
 
+
 class Vision(models.Model):
     header = models.ForeignKey(
         Header, on_delete=models.SET_NULL, null=True, blank=True)
@@ -57,11 +58,12 @@ class Vision(models.Model):
         verbose_name = "Vision"
         verbose_name_plural = "Vision"
 
+
 class WhyUs(models.Model):
     header = models.ForeignKey(
         Header, on_delete=models.SET_NULL, null=True, blank=True)
-    description_en = models.TextField(max_length=500)
-    description_ar = models.TextField(
+    why_majar_title_en = models.TextField(max_length=500)
+    why_majar_title_ar = models.TextField(
         max_length=500, null=True, blank=True)
 
     def __str__(self):
@@ -70,6 +72,7 @@ class WhyUs(models.Model):
     class Meta:
         verbose_name = "Why Us"
         verbose_name_plural = "Why Us"
+
 
 class CustomHotline(models.Model):
     header = models.ForeignKey(
@@ -108,7 +111,6 @@ class Property(models.Model):
         verbose_name = "Property"
         verbose_name_plural = "Property"
 
-        
 
 class Contact(models.Model):
     header = models.ForeignKey(
@@ -141,7 +143,6 @@ class WhyMajar(models.Model):
     description_en = models.TextField(max_length=500)
     description_ar = models.TextField(
         max_length=500, null=True, blank=True)
-    
 
     def __str__(self):
         return 'Why Majar'
