@@ -26,10 +26,10 @@ class Blog(models.Model):
 class BlogDescriptions(models.Model):
     blog = models.ForeignKey(
         Blog, on_delete=models.SET_NULL, null=True, blank=True)
-    name_en = models.TextField(max_length=500)
-    name_ar = models.TextField(max_length=500, null=True, blank=True)
-    description_en = models.TextField(max_length=500)
-    description_ar = models.TextField(max_length=500, null=True, blank=True)
+    paragraph_en = models.TextField(max_length=500)
+    paragraph_ar = models.TextField(max_length=500, null=True, blank=True)
+    list_items_en = models.TextField(max_length=500)
+    list_items_ar = models.TextField(max_length=500, null=True, blank=True)
     order = models.PositiveIntegerField()
 
     def __str__(self):
